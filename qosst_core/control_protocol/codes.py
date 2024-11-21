@@ -97,18 +97,14 @@ class QOSSTCodes(IntEnum):
     PE_DENIED = 167  #: Deny the estimated parameters and abort.
 
     # Error Correction (180-199)
-    EC_INITIALIZATION = 180
-    EC_READY = 181
-    EC_DENIED = 182
-    EC_BLOCK = 183
-    EC_BLOCK_ACK = 184
-    EC_BLOCK_ERROR = 185
-    EC_REMAINING = 186
-    EC_REMAINING_ACK = 187
-    EC_REMAINING_ERROR = 188
-    EC_VERIFICATION = 189
-    EC_VERIFICATION_SUCCESS = 190
-    EC_VERIFICATION_FAIL = 191
+    EC_INITIALIZATION = 180 #: Start of EC process.
+    EC_READY = 181 #: EC process ready to be started.
+    EC_END = 182 #: End of EC process.
+    EC_END_ACK = 183 #: Acknowledgment of EC process end.
+    EC_SYNDROME = 184 #: Send syndrome (and other info)
+    EC_CRC = 185 #: Acknowledge syndrome and send back Cyclic Redundency Check.
+    EC_DISCARD = 186 #: Send final discard flags.
+    EC_DISCARD_ACK = 187 #: Acknowledge final discard flags.
 
     # Privacy Amplification (200-219)
     PA_REQUEST = 200
