@@ -722,23 +722,33 @@ modulation_type = "qosst_core.modulation.GaussianModulation"
 # Default : 0
 modulation_size = 0
 
-[frame.zadoff_chu]
+[frame.synchronization]
+# Synchronization type
+# Possible choices are ZadoffChuSequence, MaximumLengthSequence
+# Default : ZadoffChuSequence
+# synchronization_cls = "qosst_core.syncrhonization.ZadoffChuSequence"
+synchronization_ = "qosst_core.syncrhonization.MaximumLengthSequence"
+
 # The root of the Zadoff-Chu sequence.
 # This should be comprime with the length.
 # Default : 5
-root = 5
+zc_root = 5
 
 # The length of the Zadoff-Chu sequence.
 # This should be coprime with the root.
 # Default : 3989
-length = 3989
+zc_length = 3989
 
-# The rate of the Zadoff-Chu sequence in Samples/s.
+# The number of bits of the Maximum Length Senquence
+# Default : 16
+mls_nbits = 16
+
+# The rate of the synchronization sequence in Samples/s.
 # A rate of 0 will be understood as to use the same rate as the DAC.
 # Default : 0
 rate = 0
 
-# The amplitude of the Zadoff-Chu sequence.
-# An amplitude of 1 means that the Zadoff-Chu is output at the maximum amplitude of the DAC.
+# The amplitude of the synchronization sequence.
+# An amplitude of 1 means that the synchronization is output at the maximum amplitude of the DAC.
 # Default : 1
 amplitude = 1
