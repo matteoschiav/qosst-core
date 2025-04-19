@@ -27,25 +27,32 @@ class ZadoffChuSequence(SynchronizationSequence):
     Zadoff-Chu synchronization sequence.
     """
 
-    root: int  #: Root value for the sequence.
-    length: int  #: Length of the sequence.
+    _root: int  #: Root value for the sequence.
+    _length: int  #: Length of the sequence.
 
-    def __init__(self, root: int, length: int) -> None:
+    def __init__(self, root: int, length: int, **_kwargs) -> None:
         """
         Args:
             root (int): the root of the Zadoff-Chu sequence.
             length (int): the length of the Zadoff-Chu sequence.
         """
 
-        self.root = root
-        self.length = length
-    
+        self._root = root
+        self._length = length
+            
     def sequence(self) -> np.ndarray:
         """
         Generate the Zadoff-Chu sequence
         """
 
-        return zcsequence(root=self.root, length=self.length)
+        return zcsequence(root=self._root, length=self._length)
+    
+    def length(self) -> int:
+        """
+        Length of the synchronization sequence
+        """
+
+        return self._length
     
     def __repr__(self) -> str:
         return f"ZadoffChuSequence(root={self.root},length={self.length})"

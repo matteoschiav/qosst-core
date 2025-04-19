@@ -27,15 +27,15 @@ class MaximumLengthSequence(SynchronizationSequence):
     Maximum Length Sequence class.
     """
 
-    nbits: int  #: number of bits of the sequence
+    _nbits: int  #: number of bits of the sequence
 
-    def __init__(self, nbits: int) -> None:
+    def __init__(self, nbits: int, **_kwargs) -> None:
         """
         Args:
             nbits (int): number of bits of the sequence
         """
 
-        self.nbits = nbits
+        self._nbits = nbits
     
     def sequence(self) -> np.ndarray:
         """
@@ -43,6 +43,13 @@ class MaximumLengthSequence(SynchronizationSequence):
         """
         
         return max_len_seq(nbits=self.nbits)
+    
+    def length(self) -> int:
+        """
+        Length of the synchronization sequence
+        """
+
+        return ( (2**self._nbits) - 1 )
     
     def __repr__(self) -> str:
         return f"MaximumLengthSequence(nbits={self.nbits})"

@@ -40,3 +40,13 @@ class SynchronizationSequence(abc.ABC):
         Returns:
             np.ndarray: the modulated points.
         """
+
+    @property
+    @abc.abstractmethod
+    def length(self) -> int:
+        """
+        Return the length of the synchronization sequence.
+        
+        Returns:
+            int: length of the synchronization sequence.
+        """
