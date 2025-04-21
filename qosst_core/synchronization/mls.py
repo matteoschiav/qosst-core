@@ -42,7 +42,7 @@ class MaximumLengthSequence(SynchronizationSequence):
         Generate the Maximum Length Sequence
         """
         
-        return max_len_seq(nbits=self._nbits)
+        return max_len_seq(nbits=self._nbits)[0]
     
     def length(self) -> int:
         """
