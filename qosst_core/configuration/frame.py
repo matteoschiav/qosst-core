@@ -230,11 +230,6 @@ class FrameSynchronizationConfiguration(BaseConfiguration):
                 f"The amplitude of the configuration sequence must be between 0 and 1 (given value : {self.amplitude})"
             )
         
-        if not self.synchronization_sequence in self._synchronization_list:
-            raise InvalidConfiguration(
-                f"The chosen synchronization sequence ({self.synchronization_sequence}) is not present in the synchronization list."
-            )
-
     def __str__(self) -> str:
         res = "Frame Synchronization Configuration\n"
         res += "----------------------\n"
