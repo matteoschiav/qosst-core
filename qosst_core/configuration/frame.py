@@ -176,7 +176,7 @@ class FrameSynchronizationConfiguration(BaseConfiguration):
     amplitude: float  #: Amplitude of the Zadoff-Chu sequence. An amplitude of 1.0 means that the sequence is output at the maximum amplitude of the DAC.
 
     DEFAULT_SYNCHRONIZATION_STR: str = (
-        'qosst_core.synchronization.ZadoffChuSynchronization'  #: Default synchronization.
+        'qosst_core.synchronization.ZadoffChuSequence'  #: Default synchronization.
     )
     DEFAULT_ZC_ROOT: int = 5  #: Default value for the root of the Zadoff-Chu sequence.
     DEFAULT_ZC_LENGTH: int = 3989  #: Default value for the length of the Zadoff-Chu sequence.

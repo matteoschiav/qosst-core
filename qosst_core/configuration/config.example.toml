@@ -726,8 +726,8 @@ modulation_size = 0
 # Synchronization type
 # Possible choices are ZadoffChuSequence, MaximumLengthSequence
 # Default : ZadoffChuSequence
-# synchronization_cls = "qosst_core.syncrhonization.ZadoffChuSequence"
-synchronization_ = "qosst_core.syncrhonization.MaximumLengthSequence"
+# synchronization_type = "qosst_core.syncrhonization.ZadoffChuSequence"
+synchronization_type = "qosst_core.syncrhonization.MaximumLengthSequence"
 
 # The root of the Zadoff-Chu sequence.
 # This should be comprime with the length.
