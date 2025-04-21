@@ -47,6 +47,7 @@ class ZadoffChuSequence(SynchronizationSequence):
 
         return zcsequence(root=self._root, length=self._length)
     
+    @property
     def length(self) -> int:
         """
         Length of the synchronization sequence
@@ -55,7 +56,7 @@ class ZadoffChuSequence(SynchronizationSequence):
         return self._length
     
     def __repr__(self) -> str:
-        return f"ZadoffChuSequence(root={self.root},length={self.length})"
+        return f"ZadoffChuSequence(root={self._root},length={self._length})"
 
     def __str__(self) -> str:
-        return f"Zadoff Chu sequence (root = {self.root}, length = {self.length})"
+        return f"Zadoff Chu sequence (root = {self._root}, length = {self._length})"

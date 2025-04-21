@@ -44,6 +44,7 @@ class MaximumLengthSequence(SynchronizationSequence):
         
         return max_len_seq(nbits=self._nbits)[0]
     
+    @property
     def length(self) -> int:
         """
         Length of the synchronization sequence
