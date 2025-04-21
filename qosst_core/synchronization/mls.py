@@ -52,7 +52,7 @@ class MaximumLengthSequence(SynchronizationSequence):
         return ( (2**self._nbits) - 1 )
     
     def __repr__(self) -> str:
-        return f"MaximumLengthSequence(nbits={self.nbits})"
+        return f"MaximumLengthSequence(nbits={self._nbits})"
 
     def __str__(self) -> str:
-        return f"Maximum Length Sequence (nbits = {self.nbits})"
+        return f"Maximum Length Sequence (nbits = {self._nbits})"
