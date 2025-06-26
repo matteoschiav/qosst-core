@@ -25,6 +25,6 @@ It contains :
 * the modulations
 * some constants.
 """
-__version__ = "0.10.4"
+__version__ = "0.10.4.dev+synchro"
 
 RELEASE_NAME = "Karadoc"

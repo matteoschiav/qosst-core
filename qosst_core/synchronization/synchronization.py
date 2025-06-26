@@ -18,7 +18,6 @@
 Generic synchronization sequence.
 """
 import abc
-from typing import Optional
 
 import numpy as np
 
@@ -46,7 +45,7 @@ class SynchronizationSequence(abc.ABC):
     def length(self) -> int:
         """
         Return the length of the synchronization sequence.
-        
+
         Returns:
             int: length of the synchronization sequence.
         """
