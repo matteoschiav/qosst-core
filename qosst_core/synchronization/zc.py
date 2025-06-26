@@ -22,6 +22,7 @@ import numpy as np
 from qosst_core.synchronization.synchronization import SynchronizationSequence
 from qosst_core.comm.zc import zcsequence
 
+
 class ZadoffChuSequence(SynchronizationSequence):
     """
     Zadoff-Chu synchronization sequence.
@@ -39,14 +40,14 @@ class ZadoffChuSequence(SynchronizationSequence):
 
         self._root = root
         self._length = length
-            
+
     def sequence(self) -> np.ndarray:
         """
         Generate the Zadoff-Chu sequence
         """
 
         return zcsequence(root=self._root, length=self._length)
-    
+
     @property
     def length(self) -> int:
         """
@@ -54,7 +55,7 @@ class ZadoffChuSequence(SynchronizationSequence):
         """
 
         return self._length
-    
+
     def __repr__(self) -> str:
         return f"ZadoffChuSequence(root={self._root},length={self._length})"
 

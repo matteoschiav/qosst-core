@@ -236,10 +236,6 @@ device = "qosst_hal.dac.FakeDAC"
 # Default : [0,1]
 channels = [0, 1]
 
-# Location of the device
-# Default : ""
-location = ""
-
 # Extras arguments to the DAC class.
 # They will be passed as kwargs.
 # For instance having extra_args = {"erase": true}
@@ -723,11 +719,11 @@ modulation_type = "qosst_core.modulation.GaussianModulation"
 modulation_size = 0
 
 [frame.synchronization]
+
 # Synchronization type
-# Possible choices are ZadoffChuSequence, MaximumLengthSequence
-# Default : ZadoffChuSequence
-# synchronization_type = "qosst_core.syncrhonization.ZadoffChuSequence"
-synchronization_type = "qosst_core.syncrhonization.MaximumLengthSequence"
+# Possible choices are in qosst_core.synchronization: ZadoffChuSequence, MaximumLengthSequence
+# Default : "qosst_core.synchronization.ZadoffChuSequence
+synchronization_type = "qosst_core.synchronization.ZadoffChuSequence"
 
 # The root of the Zadoff-Chu sequence.
 # This should be comprime with the length.
@@ -739,7 +735,7 @@ zc_root = 5
 # Default : 3989
 zc_length = 3989
 
-# The number of bits of the Maximum Length Senquence
+# The number of bits of the Maximum Length Sequence
 # Default : 16
 mls_nbits = 16
 

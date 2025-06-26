@@ -19,8 +19,10 @@ Maximum Length Sequence for synchronization
 """
 import numpy as np
 
-from qosst_core.synchronization.synchronization import SynchronizationSequence
 from scipy.signal import max_len_seq
+
+from qosst_core.synchronization.synchronization import SynchronizationSequence
+
 
 class MaximumLengthSequence(SynchronizationSequence):
     """
@@ -36,22 +38,22 @@ class MaximumLengthSequence(SynchronizationSequence):
         """
 
         self._nbits = nbits
-    
+
     def sequence(self) -> np.ndarray:
         """
         Generate the Maximum Length Sequence
         """
-        
+
         return max_len_seq(nbits=self._nbits)[0]
-    
+
     @property
     def length(self) -> int:
         """
         Length of the synchronization sequence
         """
 
-        return ( (2**self._nbits) - 1 )
-    
+        return (2**self._nbits) - 1
+
     def __repr__(self) -> str:
         return f"MaximumLengthSequence(nbits={self._nbits})"
 
